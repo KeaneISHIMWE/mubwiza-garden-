@@ -1,8 +1,7 @@
 [build]
   base = "frontend_garden"
-  command = "npm install --legacy-peer-deps && npm run build"
+  command = "npm ci --legacy-peer-deps && npm run build"
   publish = "build"
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF"
 
 [build.processing]
   skip_processing = false
