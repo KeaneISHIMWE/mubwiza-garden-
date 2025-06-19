@@ -1,2 +1,2 @@
-# No submodules in this repository
-# This file exists to override any cached submodule configurations
+# This repository does not use submodules
+# All code is included directly in the repository structure
