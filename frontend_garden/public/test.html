@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubwiza Garden - Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #2E7D32, #4CAF50);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .image-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+        }
+        .image-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .image-card p {
+            color: #333;
+            padding: 10px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 20px 10px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 Mubwiza Garden 🌸</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 30px;">
+            Welcome to our beautiful garden showcase! Fresh flowers, vegetables, fruits, tea spices & quality seedlings from Rwanda's Northern Province.
+        </p>
+        
+        <div style="margin: 30px 0;">
+            <a href="/" class="btn">🏠 Home</a>
+            <a href="/gallery" class="btn">🖼️ Gallery</a>
+            <a href="/about" class="btn">ℹ️ About</a>
+            <a href="/contact" class="btn">📞 Contact</a>
+        </div>
+
+        <div class="gallery">
+            <div class="image-card">
+                <img src="/images/flower 1.jpg" alt="Beautiful Flower">
+                <p>🌺 Beautiful Flowers</p>
+            </div>
+            <div class="image-card">
+                <img src="/images/vegatebles in the garden.jpeg" alt="Fresh Vegetables">
+                <p>🥬 Fresh Vegetables</p>
+            </div>
+            <div class="image-card">
+                <img src="/images/strowberries.jpeg" alt="Sweet Strawberries">
+                <p>🍓 Sweet Strawberries</p>
+            </div>
+            <div class="image-card">
+                <img src="/images/mint tea.jpeg" alt="Aromatic Tea">
+                <p>🍃 Aromatic Tea</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+            <h3>📞 Contact Information</h3>
+            <p>📍 Located at Muhabura Integrated Polytechnic College (MIPC), Musanze District, Northern Province, Rwanda</p>
+            <p>📱 Instagram: @mubwiza_garden</p>
+            <p>☎️ Phone: 0788759351</p>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.image-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'all 0.5s ease';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>
