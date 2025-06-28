@@ -79,41 +79,51 @@ const Home = () => {
   return (
     <Container maxWidth="lg" sx={{ px: { xs: 1, sm: 2, md: 3 }, overflow: 'hidden' }}>
       {/* Hero Section */}
-      <Box
-        sx={{
-          position: 'relative',
-          borderRadius: { xs: 2, md: 3 },
-          color: 'white',
-          p: { xs: 2, sm: 4, md: 6, lg: 8 },
-          mb: { xs: 4, md: 6 },
-          mx: { xs: 0, sm: 0 },
-          textAlign: 'center',
-          backgroundImage: 'url(/images/tomatoes.jpeg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          minHeight: { xs: '50vh', md: '60vh' },
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          width: '100%',
-          boxSizing: 'border-box',
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(76, 175, 80, 0.7) 100%)',
-            borderRadius: 3,
-            zIndex: 1,
-          },
-          '& > *': {
+      <Fade in timeout={1500}>
+        <Box
+          sx={{
             position: 'relative',
-            zIndex: 2,
-          },
-        }}
+            borderRadius: { xs: 2, md: 3 },
+            color: 'white',
+            p: { xs: 2, sm: 4, md: 6, lg: 8 },
+            mb: { xs: 4, md: 6 },
+            mx: { xs: 0, sm: 0 },
+            textAlign: 'center',
+            backgroundImage: 'url(/images/tomatoes.jpeg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            minHeight: { xs: '50vh', md: '60vh' },
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            width: '100%',
+            boxSizing: 'border-box',
+            animation: 'float 6s ease-in-out infinite',
+            '@keyframes float': {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              background: 'linear-gradient(135deg, rgba(46, 125, 50, 0.7) 0%, rgba(76, 175, 80, 0.7) 100%)',
+              borderRadius: 3,
+              zIndex: 1,
+              transition: 'all 0.3s ease',
+            },
+            '&:hover::before': {
+              background: 'linear-gradient(135deg, rgba(46, 125, 50, 0.8) 0%, rgba(76, 175, 80, 0.8) 100%)',
+            },
+            '& > *': {
+              position: 'relative',
+              zIndex: 2,
+            },
+          }}
       >
         {/* Decorative elements */}
         <Box sx={{ mb: 2 }}>
@@ -135,31 +145,68 @@ const Home = () => {
           </Typography>
         </Box>
 
-        <Typography
-          variant="h2"
-          component="h1"
-          gutterBottom
-          sx={{
-            fontWeight: 700,
-            fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
-            color: '#FFFFFF',
-            textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)',
-            letterSpacing: '1px',
-            lineHeight: 1.2,
-            mb: 2,
-            fontFamily: '"Playfair Display", "Georgia", serif',
-            fontStyle: 'italic'
-          }}
-        >
-          MUBWIZA GARDEN
-        </Typography>
+        <Slide direction="down" in timeout={2000}>
+          <Typography
+            variant="h2"
+            component="h1"
+            gutterBottom
+            sx={{
+              fontWeight: 700,
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem', lg: '3.5rem' },
+              color: '#FFFFFF',
+              textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)',
+              letterSpacing: '1px',
+              lineHeight: 1.2,
+              mb: 2,
+              fontFamily: '"Playfair Display", "Georgia", serif',
+              fontStyle: 'italic',
+              animation: 'glow 3s ease-in-out infinite alternate',
+              '@keyframes glow': {
+                '0%': { textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6)' },
+                '100%': { textShadow: '3px 3px 6px rgba(0,0,0,0.8), 1px 1px 3px rgba(0,0,0,0.6), 0 0 20px rgba(255,255,255,0.5)' },
+              }
+            }}
+          >
+            MUBWIZA GARDEN
+          </Typography>
+        </Slide>
 
         {/* Decorative divider */}
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 3 }}>
-          <Box sx={{ width: 50, height: 1, background: 'white', opacity: 0.8 }} />
-          <Typography sx={{ mx: 2, fontSize: '1.2rem' }}>🌸</Typography>
-          <Box sx={{ width: 50, height: 1, background: 'white', opacity: 0.8 }} />
-        </Box>
+        <Zoom in timeout={2500}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 3 }}>
+            <Box sx={{
+              width: 50,
+              height: 1,
+              background: 'white',
+              opacity: 0.8,
+              animation: 'expand 2s ease-in-out infinite alternate',
+              '@keyframes expand': {
+                '0%': { width: 50 },
+                '100%': { width: 70 },
+              }
+            }} />
+            <Typography sx={{
+              mx: 2,
+              fontSize: '1.2rem',
+              animation: 'bounce 2s ease-in-out infinite',
+              '@keyframes bounce': {
+                '0%, 100%': { transform: 'scale(1)' },
+                '50%': { transform: 'scale(1.2)' },
+              }
+            }}>🌸</Typography>
+            <Box sx={{
+              width: 50,
+              height: 1,
+              background: 'white',
+              opacity: 0.8,
+              animation: 'expand 2s ease-in-out infinite alternate',
+              '@keyframes expand': {
+                '0%': { width: 50 },
+                '100%': { width: 70 },
+              }
+            }} />
+          </Box>
+        </Zoom>
 
         <Typography
           variant="h5"
@@ -191,15 +238,20 @@ const Home = () => {
             variant="contained"
             color="secondary"
             size="large"
-            onClick={() => navigate('/products')}
+            onClick={() => navigate('/gallery')}
             sx={{
               px: { xs: 2, sm: 4 },
               py: { xs: 1, sm: 1.5 },
               fontSize: { xs: '0.9rem', sm: '1rem' },
-              minWidth: { xs: 'auto', sm: 'auto' }
+              minWidth: { xs: 'auto', sm: 'auto' },
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              '&:hover': {
+                transform: 'translateY(-3px) scale(1.05)',
+                boxShadow: '0 10px 25px rgba(76, 175, 80, 0.4)',
+              }
             }}
           >
-            {t('home.shopNow')}
+            🌸 View Gallery
           </Button>
           <Button
             variant="outlined"
@@ -218,7 +270,8 @@ const Home = () => {
             {t('home.learnMore')}
           </Button>
         </Box>
-      </Box>
+        </Box>
+      </Fade>
 
       {/* Categories Section */}
       <Box ref={categoriesRef} sx={{ mb: { xs: 4, md: 6 }, width: '100%', overflow: 'hidden' }}>
@@ -241,6 +294,7 @@ const Home = () => {
                 style={{ transitionDelay: categoriesVisible ? `${index * 200}ms` : '0ms' }}
               >
                 <Box
+                  onClick={() => navigate('/gallery')}
                   sx={{
                     position: 'relative',
                     height: 250,
@@ -248,13 +302,12 @@ const Home = () => {
                     overflow: 'hidden',
                     boxShadow: 2,
                     cursor: 'pointer',
-                    transition: 'all 0.3s ease',
+                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
-                      transform: 'translateY(-4px)',
-                      boxShadow: 4,
+                      transform: 'translateY(-8px) scale(1.03)',
+                      boxShadow: '0 20px 40px rgba(0,0,0,0.2)',
                     },
                   }}
-                  onClick={() => navigate(`/products?category=${category.id}`)}
                 >
                   <Box
                     component="img"
@@ -629,24 +682,26 @@ const Home = () => {
       {/* View All Products Section */}
       <Box sx={{ mb: 6, textAlign: 'center' }}>
         <Typography variant="h4" component="h2" gutterBottom sx={{ mb: 3 }}>
-          Discover Our Products
+          🌺 Explore Our Beautiful Gallery 🌺
         </Typography>
         <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary', maxWidth: 600, mx: 'auto' }}>
-          Explore our wide selection of fresh vegetables, beautiful flowers, aromatic teas, and healthy seedlings.
+          Discover the beauty of nature through our stunning collection of fresh flowers, organic vegetables, sweet fruits, aromatic teas, and healthy seedlings.
         </Typography>
         <Button
           variant="contained"
           size="large"
-          onClick={() => navigate('/products')}
+          onClick={() => navigate('/gallery')}
           sx={{
             px: 6,
             py: 2,
             fontSize: '1.1rem',
             borderRadius: 3,
             boxShadow: 3,
+            background: 'linear-gradient(45deg, #2E7D32, #4CAF50)',
             '&:hover': {
               boxShadow: 6,
-              transform: 'translateY(-2px)'
+              transform: 'translateY(-3px) scale(1.05)',
+              background: 'linear-gradient(45deg, #1B5E20, #2E7D32)',
             },
             transition: 'all 0.3s ease'
           }}

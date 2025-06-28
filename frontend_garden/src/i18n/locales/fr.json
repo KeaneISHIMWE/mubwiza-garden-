@@ -1,16 +1,9 @@
 {
   "nav": {
     "home": "Accueil",
-    "products": "Produits",
+    "gallery": "Galerie",
     "about": "À propos",
-    "contact": "Contact",
-    "cart": "Panier",
-    "login": "Connexion",
-    "register": "S'inscrire",
-    "profile": "Profil",
-    "orders": "Mes Commandes",
-    "admin": "Panneau Admin",
-    "logout": "Déconnexion"
+    "contact": "Contact"
   },
   "home": {
     "title": "Bienvenue au Jardin Mubwiza",

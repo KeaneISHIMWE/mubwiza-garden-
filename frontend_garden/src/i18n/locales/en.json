@@ -1,16 +1,9 @@
 {
   "nav": {
     "home": "Home",
-    "products": "Products",
+    "gallery": "Gallery",
     "about": "About",
-    "contact": "Contact",
-    "cart": "Cart",
-    "login": "Login",
-    "register": "Register",
-    "profile": "Profile",
-    "orders": "My Orders",
-    "admin": "Admin Panel",
-    "logout": "Logout"
+    "contact": "Contact"
   },
   "home": {
     "title": "Welcome to Mubwiza Garden",

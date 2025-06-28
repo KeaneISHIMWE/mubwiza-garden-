@@ -1,16 +1,9 @@
 {
   "nav": {
     "home": "Ahabanza",
-    "products": "Ibicuruzwa",
+    "gallery": "Amashusho",
     "about": "Ibibazo",
-    "contact": "Twandikire",
-    "cart": "Agasanduku",
-    "login": "Kwinjira",
-    "register": "Kwiyandikisha",
-    "profile": "Umwirondoro",
-    "orders": "Ibyo Naguze",
-    "admin": "Ubuyobozi",
-    "logout": "Gusohoka"
+    "contact": "Twandikire"
   },
   "home": {
     "title": "Murakaza neza muri Mubwiza Garden",
