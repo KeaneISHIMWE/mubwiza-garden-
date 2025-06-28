@@ -19,7 +19,7 @@ import {
 } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import { useSearchParams } from 'react-router-dom';
-import { formatPriceSimple } from '../utils/currency';
+
 import { categories, products, getProductsByCategory, searchProducts } from '../data/staticData';
 
 const Products = () => {
@@ -211,7 +211,7 @@ const Products = () => {
                   <Box sx={{ position: 'relative', overflow: 'hidden' }}>
                     <CardMedia
                       component="img"
-                      height="220"
+                      height="320"
                       image={product.image_url}
                       alt={product.name}
                       sx={{
@@ -274,18 +274,11 @@ const Products = () => {
                       {product.description}
                     </Typography>
 
-                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 2 }}>
-                      <Typography variant="h5" color="primary.main" sx={{ fontWeight: 700 }}>
-                        {formatPriceSimple(product.price)}
+                    <Box sx={{ mb: 2, p: 2, backgroundColor: '#f8f9fa', borderRadius: 2 }}>
+                      <Typography variant="body2" sx={{ fontStyle: 'italic', color: '#2E7D32', textAlign: 'center' }}>
+                        🌱 Grown with care in our organic garden at Muhabura Integrated Polytechnic College,
+                        Musanze District. Fresh, natural, and sustainably cultivated for the best quality.
                       </Typography>
-                      <Box sx={{ textAlign: 'right' }}>
-                        <Typography variant="caption" color="text.secondary" display="block">
-                          Stock
-                        </Typography>
-                        <Typography variant="body2" sx={{ fontWeight: 600 }}>
-                          {product.stock_quantity}
-                        </Typography>
-                      </Box>
                     </Box>
 
                     <Box sx={{
