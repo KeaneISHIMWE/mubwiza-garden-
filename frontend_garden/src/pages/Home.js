@@ -8,6 +8,7 @@ import {
   Paper,
   Fade,
   Slide,
+  Zoom,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import {
