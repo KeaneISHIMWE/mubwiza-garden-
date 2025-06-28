@@ -83,9 +83,9 @@ const Contact = () => {
     {
       icon: <Email />,
       title: 'Email',
-      value: 'info@mubwizagarden.com',
+      value: 'mubwizagarden19@gmail.com',
       description: 'Send us an email',
-      action: 'mailto:info@mubwizagarden.com',
+      action: 'mailto:mubwizagarden19@gmail.com',
     },
     {
       icon: <LocationOn />,
@@ -350,7 +350,7 @@ const Contact = () => {
                 label="Email Us"
                 clickable
                 color="secondary"
-                onClick={() => window.open('mailto:info@mubwizagarden.com', '_blank')}
+                onClick={() => window.open('mailto:mubwizagarden19@gmail.com', '_blank')}
               />
             </Box>
           </Paper>
