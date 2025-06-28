@@ -239,7 +239,7 @@ const Home = () => {
             variant="contained"
             color="secondary"
             size="large"
-            onClick={() => navigate('/gallery')}
+            onClick={() => navigate('/products')}
             sx={{
               px: { xs: 2, sm: 4 },
               py: { xs: 1, sm: 1.5 },
@@ -295,7 +295,7 @@ const Home = () => {
                 style={{ transitionDelay: categoriesVisible ? `${index * 200}ms` : '0ms' }}
               >
                 <Box
-                  onClick={() => navigate('/gallery')}
+                  onClick={() => navigate('/products')}
                   sx={{
                     position: 'relative',
                     height: 250,
@@ -691,7 +691,7 @@ const Home = () => {
         <Button
           variant="contained"
           size="large"
-          onClick={() => navigate('/gallery')}
+          onClick={() => navigate('/products')}
           sx={{
             px: 6,
             py: 2,

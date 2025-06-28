@@ -19,14 +19,12 @@ import {
 } from '@mui/material';
 import { Search } from '@mui/icons-material';
 import { useSearchParams } from 'react-router-dom';
-import { useCart } from '../context/CartContext';
 import { formatPriceSimple } from '../utils/currency';
-import { toast } from 'react-toastify';
 import { categories, products, getProductsByCategory, searchProducts } from '../data/staticData';
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const { addToCart } = useCart();
+
 
   const [filteredProducts, setFilteredProducts] = useState(products);
   const [loading, setLoading] = useState(false);
@@ -86,10 +84,7 @@ const Products = () => {
   const endIndex = startIndex + itemsPerPage;
   const currentProducts = filteredProducts.slice(startIndex, endIndex);
 
-  const handleAddToCart = (product) => {
-    addToCart(product, 1);
-    toast.success(`${product.name} added to cart!`);
-  };
+
 
   const clearFilters = () => {
     setSearch('');
@@ -293,28 +288,20 @@ const Products = () => {
                       </Box>
                     </Box>
 
-                    <Button
-                      variant="contained"
-                      fullWidth
-                      size="large"
-                      onClick={() => handleAddToCart(product)}
-                      disabled={product.stock_quantity === 0}
-                      sx={{
-                        py: 1.5,
-                        borderRadius: 2,
-                        fontWeight: 600,
-                        background: product.stock_quantity === 0
-                          ? 'grey.400'
-                          : 'linear-gradient(45deg, #4CAF50, #66BB6A)',
-                        '&:hover': {
-                          background: product.stock_quantity === 0
-                            ? 'grey.400'
-                            : 'linear-gradient(45deg, #388E3C, #4CAF50)',
-                        }
-                      }}
-                    >
-                      {product.stock_quantity === 0 ? '❌ Out of Stock' : '🛒 Add to Cart'}
-                    </Button>
+                    <Box sx={{
+                      textAlign: 'center',
+                      py: 2,
+                      backgroundColor: '#f5f5f5',
+                      borderRadius: 2,
+                      border: '2px solid #2E7D32'
+                    }}>
+                      <Typography variant="h6" sx={{ color: '#2E7D32', fontWeight: 600 }}>
+                        🌱 Available Fresh
+                      </Typography>
+                      <Typography variant="body2" sx={{ color: '#666', mt: 0.5 }}>
+                        Contact us for orders
+                      </Typography>
+                    </Box>
                   </CardContent>
                 </Card>
               </Grid>

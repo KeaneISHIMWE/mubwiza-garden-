@@ -50,7 +50,7 @@ const Header = () => {
 
   const navigationItems = [
     { path: '/', label: t('nav.home'), icon: <Home /> },
-    { path: '/gallery', label: t('nav.gallery'), icon: <PhotoLibrary /> },
+    { path: '/products', label: t('nav.products'), icon: <PhotoLibrary /> },
     { path: '/about', label: t('nav.about'), icon: <Info /> },
     { path: '/contact', label: t('nav.contact'), icon: <ContactMail /> },
   ];

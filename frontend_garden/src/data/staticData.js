@@ -52,6 +52,138 @@ export const products = [
     is_featured: false
   },
   {
+    id: 15,
+    name: 'Premium Flower Collection 1',
+    description: 'Exquisite premium flowers carefully selected for special occasions.',
+    price: 4000,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 1.jpg',
+    stock_quantity: 25,
+    is_featured: true
+  },
+  {
+    id: 16,
+    name: 'Premium Flower Collection 2',
+    description: 'Beautiful seasonal flowers with vibrant colors and fresh fragrance.',
+    price: 3500,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 2.jpg',
+    stock_quantity: 25,
+    is_featured: false
+  },
+  {
+    id: 17,
+    name: 'Premium Flower Collection 3',
+    description: 'Elegant flower arrangement perfect for home decoration.',
+    price: 3800,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 3.jpg',
+    stock_quantity: 20,
+    is_featured: false
+  },
+  {
+    id: 18,
+    name: 'Premium Flower Collection 4',
+    description: 'Stunning flowers that bring natural beauty to any environment.',
+    price: 4200,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 4.jpg',
+    stock_quantity: 20,
+    is_featured: false
+  },
+  {
+    id: 19,
+    name: 'Premium Flower Collection 5',
+    description: 'Fresh garden flowers with exceptional quality and longevity.',
+    price: 3600,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 5.jpg',
+    stock_quantity: 30,
+    is_featured: false
+  },
+  {
+    id: 20,
+    name: 'Premium Flower Collection 6',
+    description: 'Colorful flower bouquet perfect for gifts and celebrations.',
+    price: 3900,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 6.jpg',
+    stock_quantity: 25,
+    is_featured: false
+  },
+  {
+    id: 21,
+    name: 'Premium Flower Collection 7',
+    description: 'Handpicked flowers with natural beauty and fresh aroma.',
+    price: 4100,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 7.jpg',
+    stock_quantity: 20,
+    is_featured: false
+  },
+  {
+    id: 22,
+    name: 'Premium Flower Collection 8',
+    description: 'Exotic flowers that add elegance to any special occasion.',
+    price: 4500,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 8.jpg',
+    stock_quantity: 15,
+    is_featured: true
+  },
+  {
+    id: 23,
+    name: 'Premium Flower Collection 9',
+    description: 'Beautiful garden flowers with vibrant colors and lasting freshness.',
+    price: 3700,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 9.jpg',
+    stock_quantity: 25,
+    is_featured: false
+  },
+  {
+    id: 24,
+    name: 'Premium Flower Collection 10',
+    description: 'Stunning flower arrangement perfect for home and office decoration.',
+    price: 4300,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 10.jpg',
+    stock_quantity: 20,
+    is_featured: false
+  },
+  {
+    id: 25,
+    name: 'Premium Flower Collection 11',
+    description: 'Fresh seasonal flowers with exceptional beauty and quality.',
+    price: 3800,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 11.jpg',
+    stock_quantity: 25,
+    is_featured: false
+  },
+  {
+    id: 26,
+    name: 'Premium Flower Collection 13',
+    description: 'Elegant premium flowers perfect for special events and celebrations.',
+    price: 4600,
+    category_id: 1,
+    category_name: 'Flowers',
+    image_url: '/images/flower 13.jpg',
+    stock_quantity: 15,
+    is_featured: true
+  },
+  {
     id: 3,
     name: 'Sunflower Bouquet',
     description: 'Bright and cheerful sunflowers that bring sunshine to your day.',
