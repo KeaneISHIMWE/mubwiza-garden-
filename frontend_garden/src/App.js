@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import './i18n';
+import './i18n/index';
 
 import theme from './styles/theme';
 import { AuthProvider } from './context/AuthContext';
